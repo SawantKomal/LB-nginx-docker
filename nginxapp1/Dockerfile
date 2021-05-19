@@ -1,7 +1,7 @@
-FROM nginx
+FROM nginx:1.19.10
+Expose 80
 WORKDIR /usr/share/nginx/html/
 RUN rm /usr/share/nginx/html/*
-COPY app  /usr/share/nginx/html/
-COPY nginxapp1.conf /etc/nginx/
 RUN rm /etc/nginx/nginx.conf
-Expose 80
+COPY nginx.conf /etc/nginx/
+COPY app /usr/share/nginx/html
