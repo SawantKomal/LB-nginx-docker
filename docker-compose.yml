@@ -12,26 +12,26 @@ services:
     build:
       context: ./nginxapp1
       dockerfile: Dockerfile
-    ports:
-      - "8081:80"
+  #  ports:
+  #    - "8081:80"
   nginxapp2:
     build:
       context: ./nginxapp2
       dockerfile: Dockerfile
-    ports:
-      - "8082:80"
+   #ports:
+   #   - "8082:80"
 
   httpapp1:
     image: httpd:2.4
-    ports:
-      - "8083:80"
+    #ports:
+    # - "8083:80"
     volumes:
       - ./apacheapp1/app:/usr/local/apache2/htdocs/
 
   httpapp2:
     image: httpd:2.4
-    ports:
-      - "8084:80"
+    #ports:
+    #  - "8084:80"
     volumes:
       - ./apacheapp2/app:/usr/local/apache2/htdocs/
 
