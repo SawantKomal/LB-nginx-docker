@@ -17,14 +17,14 @@ services:
   httpapp1:
     image: httpd:2.4
     ports:
-      - "8087:80"
+      - "8083:80"
     volumes:
       - ./apacheapp1/app:/usr/local/apache2/htdocs/
 
   httpapp2:
     image: httpd:2.4
     ports:
-      - "8088:80"
+      - "8084:80"
     volumes:
       - ./apacheapp2/app:/usr/local/apache2/htdocs/
 
