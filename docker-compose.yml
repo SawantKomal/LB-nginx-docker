@@ -1,6 +1,13 @@
 version: '3'
 
 services:
+  proxy: 
+    build:
+      context: .
+      dockerfile: nginxproxy.dockerfile
+    ports:
+      - "80:80"
+
   nginxapp1:
     build:
       context: ./nginxapp1
