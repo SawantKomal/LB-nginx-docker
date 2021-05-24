@@ -7,6 +7,10 @@ services:
       dockerfile: nginxproxy.dockerfile
     ports:
       - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt/live/testdocker.ddns.net/fullchain.pem:/etc/letsencrypt/live/testdocker.ddns.net/fullchain.pem
+      - /etc/letsencrypt/live/testdocker.ddns.net/privkey.pem:/etc/letsencrypt/live/testdocker.ddns.net/privkey.pem
 
   nginxapp1:
     build:
